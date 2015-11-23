@@ -1,0 +1,1 @@
+cvlc -vvv rtsp://10.16.1.2:8554/unicast --rtsp-caching=5000 --http-caching=5000 --no-sout-audio --sout '#rtp{sdp=rtsp://:8082/}' :demux=h264
