@@ -57,7 +57,7 @@ if(!$socket){die("Ошибка подключения".socket_last_error());};
 $datafromserv = socket_read($socket, 1024, PHP_NORMAL_READ);
 socket_send($socket, $datatoserv, 10, MSG_EOF);
 socket_close($socket);
-if($datafromserv==""){die("Ничего не получено");};
+if($datafromserv==""){die("Сервис не запущен");};
 
 if($datafromserv=="NULL\n"){$date="Ни одного сеанса не было";$files=NULL;}else{
   $date = substr($datafromserv,strpos($datafromserv,'date:\'')+6,19);
